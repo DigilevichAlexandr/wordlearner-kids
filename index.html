@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WordLearnerKids</title>
-    <base href="/wordlearner-kids/" />
+    <base href="/" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -28,5 +28,12 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
+
+<script>
+    var path = window.location.pathname;
+    var base = path.substring(0, path.lastIndexOf('/') + 1);
+    document.write('<base href="' + base + '" />');
+</script>
+
 
 </html>
